@@ -1,4 +1,5 @@
 
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +26,7 @@ a {
     text-decoration: none;
 }
 
+/* Header and Navigation */
 header {
     background: var(--white);
     box-shadow: 0 2px 12px #00000010;
@@ -40,6 +42,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -76,6 +79,7 @@ header {
     cursor: pointer;
 }
 
+/* Home Section */
 .hero {
     max-width: 1150px;
     min-height: 570px;
@@ -89,6 +93,7 @@ header {
 
 .hero-content {
     flex: 1.5;
+    min-width: 0;
 }
 
 .welcome,
@@ -109,7 +114,7 @@ header {
     color: var(--primary);
 }
 
-.hero h2 {
+.hero-content h2 {
     font-size: 20px;
     margin-bottom: 18px;
 }
@@ -129,7 +134,7 @@ header {
 .btn {
     display: inline-block;
     background: var(--primary);
-    color: white;
+    color: var(--white);
     padding: 12px 22px;
     border-radius: 8px;
     font-weight: bold;
@@ -140,13 +145,15 @@ header {
 }
 
 .btn-outline {
-    background: white;
+    background: var(--white);
     color: var(--primary);
     border: 2px solid var(--primary);
 }
 
+/* Profile Card */
 .profile-card {
-    flex: 1;
+    flex: 0 0 320px;
+    width: 100%;
     max-width: 340px;
     text-align: center;
     padding: 40px 25px;
@@ -155,30 +162,37 @@ header {
     box-shadow: 0 10px 35px #7654e815;
 }
 
-.profile-photo {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: 0 4px 15px #7654e840;
-    display: block;
+/* Picture Wrapper */
+.profile-image-wrapper {
+    width: 190px;
+    height: 190px;
     margin: 0 auto 20px;
+    border: 5px solid var(--white);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #7654e840;
 }
 
-    display: grid;
-    place-items: center;
-    background: linear-gradient(135deg, #7654e8, #b6a4ff);
-    color: white;
-    font-size: 45px;
-    font-weight: bold;
-    border: 6px solid white;
+/* Actual Profile Picture */
+.profile-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.profile-card h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
 }
 
 .profile-card p {
     color: var(--text);
 }
 
+/* General Sections */
 .section {
     padding: 75px 24px;
     text-align: center;
@@ -193,6 +207,7 @@ header {
     margin: 8px 0 35px;
 }
 
+/* About, Education, and Contact Cards */
 .about-card,
 .info-card,
 .contact-card {
@@ -200,7 +215,7 @@ header {
     margin: auto;
     padding: 30px;
     border-radius: 14px;
-    background: white;
+    background: var(--white);
     box-shadow: 0 5px 25px #00000008;
     text-align: left;
 }
@@ -225,6 +240,16 @@ header {
     color: var(--text);
 }
 
+.contact-card p + p {
+    margin-top: 15px;
+}
+
+.contact-card a {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Skills and Projects Layout */
 .skills-grid,
 .projects-grid {
     max-width: 1100px;
@@ -236,7 +261,7 @@ header {
 
 .skill-card,
 .project-card {
-    background: white;
+    background: var(--white);
     padding: 28px 22px;
     border-radius: 14px;
     text-align: left;
@@ -279,18 +304,10 @@ header {
     margin-top: 18px;
 }
 
-.contact-card p + p {
-    margin-top: 15px;
-}
-
-.contact-card a {
-    color: var(--primary);
-    font-weight: bold;
-}
-
+/* Footer */
 footer {
     background: var(--dark);
-    color: white;
+    color: var(--white);
     text-align: center;
     padding: 28px 15px;
 }
@@ -301,6 +318,7 @@ footer p + p {
     margin-top: 5px;
 }
 
+/* Tablet and Mobile */
 @media (max-width: 800px) {
     .menu-btn {
         display: block;
@@ -309,10 +327,10 @@ footer p + p {
     .nav-links {
         display: none;
         position: absolute;
-        top: 68px;
+        top: 100%;
         left: 0;
         right: 0;
-        background: white;
+        background: var(--white);
         padding: 20px 24px;
         flex-direction: column;
         gap: 18px;
@@ -329,12 +347,23 @@ footer p + p {
         padding-top: 55px;
     }
 
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content > p:not(.welcome) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .hero-buttons {
         justify-content: center;
     }
 
     .profile-card {
+        flex: 0 1 auto;
         width: 100%;
+        max-width: 340px;
     }
 
     .skills-grid,
@@ -343,6 +372,7 @@ footer p + p {
     }
 }
 
+/* Small Mobile Screens */
 @media (max-width: 520px) {
     .section-title {
         font-size: 28px;
@@ -362,5 +392,9 @@ footer p + p {
     .contact-card {
         padding: 22px;
     }
-        }
-    
+
+    .profile-image-wrapper {
+        width: 170px;
+        height: 170px;
+    }
+}
