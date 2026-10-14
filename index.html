@@ -1,110 +1,197 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Programmer Portfolio</title>
-
+    <title>Marilyn S. Corbe | My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header>
-        <h1>My Programmer Portfolio</h1>
+        <nav class="navbar">
+            <a href="#home" class="logo">Marilyn<span>.</span></a>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <button class="menu-btn" id="menuBtn"
+                aria-label="Open navigation menu">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-
-    <section id="home" class="home">
-        <div>
-            <h2>Hello, I'm Marilyn</h2>
-            <h3>Future Programmer</h3>
-
-            <p>
-                Welcome to my programmer portfolio.
-                This website shows my education, projects,
-                and skills in programming.
-            </p>
-
-            <button onclick="showMessage()">View My Profile</button>
-        </div>
-
-        <img src="images.jpg" alt="My Profile Picture">
-    </section>
-
-
-    <section id="education">
-        <h2>Education</h2>
-
-        <div class="card">
-            <h3>College Student</h3>
-            <p>Information Technology</p>
-            <p>My School</p>
-        </div>
-    </section>
-
-
-    <section id="projects">
-        <h2>My Projects</h2>
-
-        <div class="projects">
-
-            <div class="card">
-                <h3>QR Code Attendance System</h3>
-
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+                <h1>Hello, I'm <span>Marilyn S. Corbe</span></h1>
+                <h2>BSIT Student & Future Web Developer</h2>
                 <p>
-                    A classroom attendance system that uses
-                    QR code to record student attendance.
+                    I am an Information Technology student who enjoys
+                    learning about computers, web design, and programming.
+                    This website shows my skills, education, and projects.
                 </p>
 
-                <p>
-                    <strong>Technology Stack:</strong>
-                    HTML, CSS, JavaScript, Google Forms,
-                    Google Sheets
-                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">View My Projects</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
             </div>
 
+            <div class="profile-card">
+                <div class="profile-circle">MC</div>
+                <h2>Marilyn S. Corbe</h2>
+                <p>BSIT 3-A</p>
+                <p>Future IT Professional</p>
+            </div>
+        </section>
 
-            <div class="card">
-                <h3>Programmer Portfolio</h3>
-
+        <section id="about" class="section">
+            <p class="section-label">GET TO KNOW ME</p>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-card">
                 <p>
-                    A personal website that shows my skills,
-                    education, and programming projects.
+                    My name is Marilyn S. Corbe, a Bachelor of Science
+                    in Information Technology student. I am interested
+                    in learning web development, computer systems, and
+                    other IT-related skills.
                 </p>
-
                 <p>
-                    <strong>Technology Stack:</strong>
-                    HTML, CSS, JavaScript
+                    My goal is to improve my programming skills and
+                    create useful websites and systems. I believe that
+                    every project is a chance to learn something new.
                 </p>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <section id="education" class="section section-light">
+            <p class="section-label">MY LEARNING JOURNEY</p>
+            <h2 class="section-title">Education</h2>
 
+            <div class="info-card">
+                <h3>Bachelor of Science in Information Technology</h3>
+                <p class="highlight">BSIT 3-A</p>
+                <p>
+                    Currently studying Information Technology and
+                    learning about programming, databases, networking,
+                    and web development.
+                </p>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
+        <section id="skills" class="section">
+            <p class="section-label">WHAT I AM LEARNING</p>
+            <h2 class="section-title">My Skills</h2>
 
-        <p>Email: your@email.com</p>
-        <p>Phone: 09XXXXXXXXX</p>
-    </section>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Creating the structure of websites.</p>
+                </div>
 
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <p>Designing website colors, layouts, and styles.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Adding actions and features to websites.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Networking</h3>
+                    <p>Learning network setup and management.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Database</h3>
+                    <p>Learning how to store and manage information.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Problem Solving</h3>
+                    <p>Finding ways to solve technical problems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-light">
+            <p class="section-label">MY SCHOOL WORK</p>
+            <h2 class="section-title">My Projects</h2>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">01</div>
+                    <h3>Programmer Portfolio Website</h3>
+                    <p>
+                        A personal website that presents my profile,
+                        education, skills, and projects as an IT student.
+                    </p>
+                    <p class="tech">
+                        HTML · CSS · JavaScript
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">02</div>
+                    <h3>QR Code-Based Classroom Attendance System</h3>
+                    <p>
+                        A proposed system that uses QR codes to help
+                        record and organize classroom attendance.
+                    </p>
+                    <p class="tech">
+                        QR Code · Google Forms · Google Sheets
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">03</div>
+                    <h3>Student Central</h3>
+                    <p>
+                        A student website idea that can help organize
+                        school information, activities, and projects.
+                    </p>
+                    <p class="tech">
+                        HTML · CSS · JavaScript
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <p class="section-label">LET'S CONNECT</p>
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="contact-card">
+                <p>
+                    Thank you for visiting my portfolio! You can contact
+                    me through the details below.
+                </p>
+                <p>Email: <span>Add your email address here</span></p>
+                <p>GitHub:
+                    <a href="https://github.com/corbemarilyn"
+                       target="_blank" rel="noopener noreferrer">
+                        Visit My GitHub
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2026 My Programmer Portfolio</p>
+        <p>© <span id="year"></span> Marilyn S. Corbe | My Portfolio</p>
+        <p>Made with HTML, CSS, and JavaScript</p>
     </footer>
 
-
     <script src="script.js"></script>
-
 </body>
-</html>
+    </html>
+
