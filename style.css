@@ -155,11 +155,17 @@ header {
     box-shadow: 0 10px 35px #7654e815;
 }
 
-.profile-circle {
-    width: 150px;
-    height: 150px;
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
     border-radius: 50%;
-    margin: 0 auto 22px;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px #7654e840;
+    display: block;
+    margin: 0 auto 20px;
+}
+
     display: grid;
     place-items: center;
     background: linear-gradient(135deg, #7654e8, #b6a4ff);
